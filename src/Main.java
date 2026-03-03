@@ -13,14 +13,9 @@ public class Main {
 
         for (int element : inputArray1){
             sum = sum + element;
-        }
-        for (int element : inputArray1){
             if (element > max){
                 max = element;
             }
-        }
-
-        for (int element : inputArray1){
             if (element < min){
                 min = element;
             }
@@ -67,43 +62,37 @@ public class Main {
 
         System.out.println("Задача 4");
 
-        int [] inputArray4 = {350, 400, 200, -120, -300};
-        boolean remains = true;
+        int [] inputArray4 = {350, 400, 200, -120,300};
+        boolean outputArray4 = true;
         int indicator = 0;
-        boolean [] outputArray4 = new boolean[5];
         for (int money : inputArray4){
             if (money >= 0){
-                remains = true;
+                outputArray4 = true;
             }else {
-               remains = false;
+                outputArray4 = false;
                break;
             }
-            outputArray4[indicator] = remains;
-            indicator++;
         }
-        System.out.println(remains);
         System.out.println(Arrays.toString(inputArray4));
-        System.out.println(Arrays.toString(outputArray4) + "\n");
+        System.out.println(outputArray4 + "\n");
 
         System.out.println("Задача 5");
 
         int [] inputArray5 = {5000, 7000, 2000, -200, -3000};
-        boolean profit = true;
+        boolean outputArray5 = true;
         int month = 0;
-        boolean [] outputArray5 = new boolean[5];
-        for (int sumProfit : inputArray5){
+                for (int sumProfit : inputArray5){
             if (sumProfit > 0){
-                profit = true;
+                outputArray5 = true;
             } else{
-                profit = false;
+                outputArray5 = false;
                 continue;
             }
-            outputArray5[month] = profit;
             month++;
 
         }
         System.out.println("Количество месяцев, в которых прибыль была положительной = " + month);
         System.out.println(Arrays.toString(inputArray5));
-        System.out.println(Arrays.toString(outputArray5) + "\n");
+        System.out.println(outputArray5 + "\n");
     }
 }
