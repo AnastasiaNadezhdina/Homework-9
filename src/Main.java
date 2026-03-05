@@ -60,45 +60,42 @@ public class Main {
         System.out.println(Arrays.toString(inputArray3));
         System.out.println(Arrays.toString(outputArray3) + "\n");
 
-        System.out.println("Задача 4");
-
         int [] inputArray4 = {350, 400, 200, -120, 300};
-        boolean remains = false;
-        int indicator = 0;
-        boolean[] outputArray4 = new boolean [inputArray3.length];
+        boolean[] outputArray4 = new boolean [1];
+        outputArray4[0] = true;
+
         for (int money : inputArray4){
-            if (money < 0){
-                remains = false;
+            if (money > 0){
+                outputArray4[0] = true;
+
+            } else {
+                outputArray4[0] = false;
                 break;
-            }else {
-                remains = true;
             }
-            outputArray4[indicator]=remains;
-            indicator++;
+
         }
-        System.out.println(outputArray4[indicator]);
+        System.out.println(outputArray4[0]);
         System.out.println(Arrays.toString(inputArray4) + "\n");
 
 
         System.out.println("Задача 5");
 
         int [] inputArray5 = {5000, 7000, -2000, -200, 3000};
-        boolean profit = true;
-        boolean[] outputArray5 = new boolean [inputArray5.length];
+        boolean[] outputArray5 = new boolean [1];
+        outputArray5[0] = true;
         int month = 0;
-                for (int sumProfit : inputArray5){
+        for (int sumProfit : inputArray5){
             if (sumProfit > 0){
-                profit = true;
+                outputArray5[0] = true;
             } else{
-                profit = false;
+                outputArray5[0] = false;
                 continue;
             }
-            outputArray5[month] = profit;
             month++;
 
         }
         System.out.println("Количество месяцев, в которых прибыль была положительной = " + month);
         System.out.println(Arrays.toString(inputArray5));
-        System.out.println(outputArray5[month] + "\n");
+        System.out.println(outputArray5[0] + "\n");
     }
 }
